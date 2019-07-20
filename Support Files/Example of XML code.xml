@@ -1,0 +1,27 @@
+<form_Start-Tag>
+  <!-- We use "<!-""->" to write the note. -->
+  <!-- XML code also own the feature of nest structure, just like the json code. -->
+  <Name_Child-Tag>Jeon</Name_Child-Tag>
+  <!-- We could create tags in which we could involve the text nore inside the structure of XML code. -->
+  <!-- "Jeon" is the text node here.-->
+  <!-- We add "/" to show the ending tag.-->
+  <Age_Child-Tag type="intl">
+    <!-- We could put some "attributes" inside the tag, just like "type" shows here. -->
+    35
+  </Age_Child-Tag>
+  <email hide="yes"/>
+</form_Start-Tag>
+
+
+<list>
+  <department>
+    <project region="1">
+      <projectNumber>0001</projectNumber>
+      <crew>Alan, betty</crew>
+    </project>
+    <project region="2">
+      <projectNumber>0012</projectNumber>
+      <crew>Jeon, Cindy</crew>
+    </project>
+  </department>
+</list>
