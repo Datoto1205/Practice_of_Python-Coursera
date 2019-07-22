@@ -1,0 +1,23 @@
+{
+  "Name": "Alan",
+  "Details": {
+    "Age": "20",
+    "Sex": "Male"
+  },
+  "Degree": {
+    "hide": "Yes"
+  }
+}
+
+
+
+[
+  {
+    "Name": "Alan",
+    "Age": "25"
+  },
+  {
+    "Name": "Jeon",
+    "Age": "24"
+  }
+]
