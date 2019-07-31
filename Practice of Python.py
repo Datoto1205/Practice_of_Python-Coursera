@@ -146,3 +146,16 @@ for i in range(0, 50):
     randomMatrix.append(random.randint(0, 50000))
 
 print(randomMatrix)
+
+# While
+a = 0
+
+while True:
+    while a < 3:
+        print("The code \"while True\" means \"always\" I guess, I should stop it!")
+        a += 1
+
+# Note with Multipal Lines
+'''
+    I could press "control" and "/" to create note with multipal lines.
+'''
