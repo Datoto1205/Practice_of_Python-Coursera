@@ -1,0 +1,29 @@
+{
+  "status": "OK",
+  "result": [
+    {
+      "geometry": {
+        "location_type": "APPROXIMATE",
+        "location": {
+          "lat": 25,
+            "lng": 0
+        }
+      },
+      "address_components": [
+        {
+          "long_name": "Columbia University",
+            "types": [
+              "locality",
+                "political"
+            ],
+            "short_name": "Columbia University"
+        }
+      ],
+      "formatted_address": "Columbia University, NYU, USA",
+      "types": [
+        "locality",
+          "political"
+      ]
+    }
+  ]
+}

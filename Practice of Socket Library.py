@@ -1,4 +1,5 @@
 # Use Socket to Fetch The HTML Code
+print("\nUse Socket to Fetch The HTML Code\n")
 import socket
 
 mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -32,6 +33,7 @@ mysock.close()
 
 
 # Use Urllib to Fetch The HTML Code
+print("\nUse Urllib to Fetch The HTML Code\n")
 import urllib.request, urllib.parse, urllib.error   # Python 3 only, it seems that it could not work in Atom...
 
 data = urllib.request.urlopen('https://www.google.com')     # Python 3 only, it seems that it could not work in Atom...
@@ -40,3 +42,19 @@ for j in data:
     print(j.decode().strip())
 # Referred article 1: https://stackoverflow.com/questions/19729927/urllib-module-error-attributeerror-module-object-has-no-attribute-request?rq=1
 # Referred article 2: https://stackoverflow.com/questions/35245430/httpresponse-object-has-no-attribute-decode
+
+
+
+# Use Urllib & BeautifulSoup to Fetch The HTML Code
+print("\nUse Urllib & BeautifulSoup to Fetch The HTML Code\n")
+import urllib.request, urllib.parse, urllib.error
+from bs4 import BeautifulSoup as bs
+
+url = "https://www.google.com"
+HtmlData = urllib.request.urlopen(url).read()
+soup = bs(HtmlData, 'html.parser')      # 'html.parser' is a fixed parameter.
+#print(soup)
+
+tag = soup('a')     # Extract all the html code inside tage <a>.
+for each in tag:
+    print(each.get('href'))     # Extract each href within tag <a>.

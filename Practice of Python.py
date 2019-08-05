@@ -44,6 +44,9 @@ print("The length of firstArray has been returned to: " + str(len(firstArray)))
 print("\nThe max element in firstArray is: " + str(max(firstArray)))
 print("The sum of every elements in firstArray is: " + str(sum(firstArray)))
 
+ls = list()
+ls
+
 # Slice of An Array
 secondArray = firstArray[1:3]
 print(secondArray)
@@ -158,4 +161,38 @@ while True:
 # Note with Multipal Lines
 '''
     I could press "control" and "/" to create note with multipal lines.
+'''
+
+# None and is
+strangeNumber = None    # None is a kind of "flag type".
+strangeBul = True
+
+for i in range(0, 2):
+    if strangeNumber is None:
+        print(type(strangeNumber))
+        strangeNumber = 1
+    else:
+        print(type(strangeNumber))
+
+    if strangeBul is True:  # "is" was used for boolean and None, it is similar to "==".
+        print("Yes")
+        strangeBul = False
+    else:
+        print("No")
+        strangeBul = True
+
+# Read A File
+'''
+fileHandle= open("THE NAME OF YOUR FILE.txt", 'r')      # open() could open a file and store it in the memory,
+                                                        "print(fileHandle)" only shows the address. Make sure
+                                                        that the file of this python codes and the file you
+                                                        want to read (here is .txt file) should be put in the
+                                                        same place.
+data = fileHandle.read()                                # read() could transfer the file handle into readable data.
+
+for eachLine in data:                                   # Run through each line in the data.
+    print(eachLine.rstrip())                            # rstrip() could be used to remove some useless "\n".
+
+    if eachLine.startswith("From:") is True:            # .startwith() method could be used to check specific syntax.
+        print("Find it!")
 '''
