@@ -193,6 +193,11 @@ data = fileHandle.read()                                # read() could transfer 
 for eachLine in data:                                   # Run through each line in the data.
     print(eachLine.rstrip())                            # rstrip() could be used to remove some useless "\n".
 
-    if eachLine.startswith("From:") is True:            # .startwith() method could be used to check specific syntax.
+    if eachLine.startswith("From:") is True:            # .startwith() method could be used to check specific syntax, it would return a boolean.
         print("Find it!")
 '''
+
+# Split Sentence
+sentence = "I love you!"
+seperatedWords = sentence.split()       # .split() method could be used to split the words.
+print(seperatedWords[1])
