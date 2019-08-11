@@ -44,9 +44,6 @@ print("The length of firstArray has been returned to: " + str(len(firstArray)))
 print("\nThe max element in firstArray is: " + str(max(firstArray)))
 print("The sum of every elements in firstArray is: " + str(sum(firstArray)))
 
-ls = list()
-ls
-
 # Slice of An Array
 secondArray = firstArray[1:3]
 print(secondArray)
@@ -60,6 +57,13 @@ firstDic["thirdGirlfriend"] = "Betty"
 # Search Value with Key
 print("The length of my firstDictionary is: " + str(len(firstDic)))
 print("The second element of firstDic is: " + str(firstDic["secondGirlfriend"]))
+'''print(firstDic[0])       # This would not work since I could not use order to
+                              extract the value, it is a difference between array
+                              and dictionary.'''
+
+print(firstDic.get("forthGirlfriend", "Alisa"))     # .get(key, default value) method could be used as try & except.
+print(firstDic.values())                            # .values() method could be used to get all the values in the dictionary.
+                                                    # .sorted(dictionary) could be used to read the key orderly, while the data in the dictionary was not stored in order in python.
 
 # Search Key with Value
 for key in firstDic:
@@ -189,9 +193,10 @@ fileHandle= open("THE NAME OF YOUR FILE.txt", 'r')      # open() could open a fi
                                                         want to read (here is .txt file) should be put in the
                                                         same place.
 data = fileHandle.read()                                # read() could transfer the file handle into readable data.
+                                                        # It seems that read() may read each "character" in the txt file, I could take into account readlines() instead.
 
 for eachLine in data:                                   # Run through each line in the data.
-    print(eachLine.rstrip())                            # rstrip() could be used to remove some useless "\n".
+    print(eachLine.rstrip())                            # rstrip() could be used to remove some useless "\n", the type of the output is string.
 
     if eachLine.startswith("From:") is True:            # .startwith() method could be used to check specific syntax, it would return a boolean.
         print("Find it!")
@@ -199,5 +204,5 @@ for eachLine in data:                                   # Run through each line 
 
 # Split Sentence
 sentence = "I love you!"
-seperatedWords = sentence.split()       # .split() method could be used to split the words.
+seperatedWords = sentence.split()       # .split() method could be used to split the words, the type of the output is list.
 print(seperatedWords[1])
