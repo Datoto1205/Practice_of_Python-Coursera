@@ -48,6 +48,10 @@ print("The sum of every elements in firstArray is: " + str(sum(firstArray)))
 secondArray = firstArray[1:3]
 print(secondArray)
 
+# Tuple
+firstTup = (5, 2, 3, 4, 1)      # Tuple is inmutable.
+print("The element 2 in firstTup is at", str(firstTup.index(2)), ".")
+
 # Dictionary
 firstDic = {}
 firstDic["firstGirlfriend"] = "Cindy"
